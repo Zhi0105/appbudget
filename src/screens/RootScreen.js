@@ -1,11 +1,11 @@
 import React from 'react'
-import { Login } from '@_components/Pages/Login'
+import { Root } from '@_components/Pages/Root'
 import { KeyboardAvoidingTemplate } from '@_components/Templates/KeyboardAvoidingTemplate'
 
-export const LoginScreen = ({ navigation }) => {
+export const RootScreen = ({ navigation }) => {
   return (
     <KeyboardAvoidingTemplate>
-      <Login navigation={navigation} />
+      <Root navigation={navigation} />
     </KeyboardAvoidingTemplate>
   )
 }

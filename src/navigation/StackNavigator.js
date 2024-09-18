@@ -3,8 +3,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 // import { Platform } from 'react-native'
 // import SplashScreen from 'react-native-splash-screen'
 
-import { LoginScreen } from '@_screens/LoginScreen'
-// import { RegisterScreen } from '@_screens/RegisterScreen'
+import { RootScreen } from '@_screens/RootScreen'
+import { SigninScreen } from '@_screens/SigninScreen'
+import { SignupScreen } from '@_screens/SignupScreen'
+
 // import { DrawerNavigator } from './DrawerNavigator'
 
 // import useUserStore from '@_stores/auth';
@@ -39,12 +41,24 @@ export const StackNavigator = () => {
     // if(!user) {
       return (
         <Stack.Navigator
-            initialRouteName="Login"
+            initialRouteName="Root"
             screenOptions={{ headerShown: false }}  
             
           >
             <Stack.Screen  
-              name="Login" component={LoginScreen} 
+              name="Root" component={RootScreen} 
+              options={{
+                animation:'slide_from_right'
+            }}
+            />
+            <Stack.Screen  
+              name="Signin" component={SigninScreen} 
+              options={{
+                animation:'slide_from_right'
+            }}
+            />
+            <Stack.Screen  
+              name="Signup" component={SignupScreen} 
               options={{
                 animation:'slide_from_right'
             }}
